@@ -1,0 +1,95 @@
+.header {
+  width: 100%;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.subheader {
+  width: 100%;
+  font-size: 18px;
+}
+
+.debters {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.debter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #242424;
+}
+
+.debter_field {
+  font-size: 18px;
+}
+
+.subheader {
+  width: 100%;
+  font-size: 18px;
+}
+
+.block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  background-color: #343434;
+  border-radius: 15px;
+}
+
+.cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  background-color: #343434;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.input {
+  all: unset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+  border-radius: 10px;
+  background-color: #242424;
+  min-width: 100px;
+  @media screen and (max-width: 700px) {
+    padding: 10px 15px;
+  }
+}
+
+.btn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FCE95E;
+  color: #000000;
+  cursor: pointer;
+  font-size: 16px;
+  @media screen and (max-width: 700px) {
+    margin-top: 10px;
+  }
+}

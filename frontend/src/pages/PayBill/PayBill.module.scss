@@ -1,0 +1,57 @@
+.pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100vh;
+  gap: 20px;
+}
+
+.header {
+  font-size: 24px;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  all: unset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+  border-radius: 10px;
+  background-color: #444444;
+  @media screen and (max-width: 700px) {
+    padding: 10px 15px;
+  }
+}
+
+.btn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FCE95E;
+  color: #000000;
+  cursor: pointer;
+  font-size: 16px;
+  &:disabled {
+    background-color: #939393;
+    cursor: not-allowed;
+  }
+  @media screen and (max-width: 700px) {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+ mongo:
+  image: mongo:latest
+  ports:
+    - 27017:27017
+  networks:
+    - iiwi
+  volumes:
+    - mongo-storage:/data/db
+  healthcheck:
+    test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+    interval: 30s
+    timeout: 20s
+    retries: 3
+ app:
+  image: tiangolo/uvicorn-gunicorn-fastapi:python3.10
+  networks:
+    - iiwi
+  ports:
+    - 8000:8000
+  volumes:
+    - .:/app
+  command: /bin/bash -c "pip install -r /app/requirements.txt && uvicorn app.main:app --reload --host 0.0.0.0"
+volumes:
+  mongo-storage:
+networks:
+  iiwi:
+    driver: bridge
